@@ -1,21 +1,21 @@
-#include"Hazel.h"
-#include<stdio.h>
+#include <Hazel.h>
 
-class Sandbox :public Hazel::Application {
+class Sandbox : public Hazel::Application
+{
 public:
-
-	Sandbox() {
-		printf("Welcome to Hazel Engine!");
-
-	}
-
-	~Sandbox() {
+	Sandbox()
+	{
 
 	}
 
+	~Sandbox()
+	{
+
+	}
 
 };
 
-Hazel::Application* Hazel::CreateApplication() {
+Hazel::Application* Hazel::CreateApplication()
+{
 	return new Sandbox();
 }

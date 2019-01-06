@@ -1,9 +1,7 @@
 #include "Application.h"
 
-
-
-
 namespace Hazel {
+
 	Application::Application()
 	{
 	}
@@ -13,7 +11,9 @@ namespace Hazel {
 	{
 	}
 
-	void Application::run() {
+	void Application::Run()
+	{
 		while (true);
 	}
+
 }

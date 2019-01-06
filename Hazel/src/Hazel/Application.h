@@ -1,6 +1,6 @@
 #pragma once
-#include"Core.h"
 
+#include "Core.h"
 
 namespace Hazel {
 
@@ -9,8 +9,11 @@ namespace Hazel {
 	public:
 		Application();
 		virtual ~Application();
-		void run();
+
+		void Run();
 	};
 
+	// To be defined in CLIENT
 	Application* CreateApplication();
+
 }

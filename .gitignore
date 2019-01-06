@@ -6,3 +6,8 @@
 /Hazel/Debug
 /bin-int/Debug-Win32
 /bin/Debug-Win32
+/Hazel/x64/Debug
+/SandBox/x64/Debug
+/.vs
+/bin-int/Debug-x64
+/bin/Debug-x64
