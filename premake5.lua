@@ -7,7 +7,7 @@ workspace "Hazel"
 		"Dist"
 	}
 
-outputdir =	"5{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+outputdir =	"%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Hazel"
 	location "Hazel"
@@ -37,7 +37,7 @@ project "Hazel"
 		}
 
 		postbuildcommands{
-			("{COPY} % {cfg.buildtarget.relpath} ../bin/" .. outputdir ..  "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -49,8 +49,8 @@ project "Hazel"
 		optimize "On"
 
 	filter "configurations:Dist"
-	defines "HZ_DIST"
-	optimize "On"
+		defines "HZ_DIST"
+		optimize "On"
 
 project "SandBox"
 	location "SandBox"
