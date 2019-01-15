@@ -17,19 +17,23 @@ project "Hazel"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hzpch.h"
+	pchsource "Hazel/src/hzpch.cpp"
+
 	files{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp"
 	}
 
 	includedirs{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
 		cppdialect  "C++17"
 		staticruntime "On"
-		systemversion "10.0.17134.0"
+		systemversion "latest"
 
 		defines{
 			"HZ_PLATFORM_WINDOWS",
@@ -77,7 +81,7 @@ project "SandBox"
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"
-		systemversion "10.0.17134.0"
+		systemversion "latest"
 
 		defines{
 			"HZ_PLATFORM_WINDOWS"
